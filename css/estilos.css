@@ -1,0 +1,131 @@
+@font-face {
+  font-family: Dancing;
+  src:url(fuente/DancingScript-Regular.ttf);
+}
+*{
+  font-family: Dancing;
+}
+body{
+  display: flex;
+  justify-content: center;
+  background-color: #02010a;
+}
+.contenido{
+  width: 900px;
+}
+.cabecera{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+header{
+  display: flex;
+  background-color: #5b7989;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1%;
+  animation: slidein 1s;
+}
+@-webkit-keyframes slidein{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+h1{
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  margin: 0;
+}
+nav {
+  justify-content: flex-end;
+}
+a {
+  color: white;
+  padding-right: 20px;
+}
+#central{
+  display: flex;
+  background-color: #82c3a6;
+  align-items: center;
+  text-align: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+#secundaria{
+  display: flex;
+  background-color: #d5c75f;
+  border: 1px;
+  align-items: center;
+  text-align: center;
+  padding: 1% 2.5%;
+}
+.imagen{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+#ImgIz{
+  width: 100%;
+  transition-property: border;
+  transition-duration: 0.5s;
+}
+#ImgIz:hover{
+  transform: rotate(10deg);
+  border: 2px solid #82c3a6;
+}
+#ImgDe{
+  width: 100%;
+  transition-property: border;
+  transition-duration: 0.5s;
+}
+#ImgDe:hover{
+  transform: translate(20px, -5px);
+  border: 2px solid #82c3a6;
+}
+img{
+  border: 2px solid #02010a;
+}
+footer{
+  width: 100%;
+  display: flex;
+  background-color: #C6d5c5;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 2%;
+}
+.pie {
+  width: 25%;
+  padding-left: 3%;
+  text-align: left;
+}
+@media screen and (max-width: 900px){
+  .contenido{
+    width: 100%;
+  }
+  header{
+    flex-direction: column;
+  }
+  .cabecera{
+    width: 100%;
+    justify-content: center;
+  }
+  #secundaria{
+    flex-direction: column;
+  }
+  .imagen{
+    width: 100%;
+  }
+  footer{
+    flex-direction: column;
+  }
+  .pie{
+    width: 100%;
+  }
+}
